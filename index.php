@@ -19,7 +19,7 @@
 					$useday = null;
 					echo "<h1> $month </h1>";
 				endif; 
-
+				
 				if($useday != $birthday['day']):
 					$useday = $birthday['day'];
 					echo "<h2> $birthday[day] </h2>";
