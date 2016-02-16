@@ -28,3 +28,9 @@ function year()
 		echo "<option value=$y>$y</option>";
 	} 
 }
+function blablabla()
+{
+for($y = date(Y); $y >= 1900; $y--) 
+	{
+		echo "<option valuadfsasdfadsfadsfe=$y>$y</option>";
+	} 
