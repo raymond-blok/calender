@@ -6,7 +6,7 @@ require("edit.logic.php");
 <head>
 	<meta charset="UTF-8">
 	<title>bewerken</title>
-	<link rel="stylesheet" type="text/css" href="common/main.css">
+	<link rel="stylesheet" type="text/css" href="../common/main.css">
 </head>
 <body>
 	<h2>wilt u het onderstaande bewerken?</h2>
