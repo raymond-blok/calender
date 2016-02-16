@@ -15,15 +15,15 @@ require("edit.logic.php");
 		<input type="text" value="<?=$birthday["person"]?>" name="name"><br>
 		datum:
 		<select name="day">
-			<?=day();?>
+			<?=day($birthday['day']);?>
 		</select>
 
 		<select name="month">
-			<?=month();?>
+			<?=month($birthday['month']);?>
 		</select>
 
 		<select name="year">
-			<?=year();?>
+			<?=year($birthday['year']);?>
 		</select>
 
 		<button value"edit" name="submit">bewerk</button>

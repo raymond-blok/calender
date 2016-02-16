@@ -20,3 +20,7 @@ else
 {
 	header('location: index.php');
 }
+if(isset($_POST['no']))
+{
+	header('location: index.php');
+}

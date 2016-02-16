@@ -1,6 +1,6 @@
 <?php
 require "../common/key.php";
-require "../common/date.php";
+require "../common/datecreate.php";
 if(isset($_POST['submit'])):
 
 	$name = $_POST['name'];

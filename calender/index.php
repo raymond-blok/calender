@@ -13,16 +13,7 @@
 		<?php
 			foreach($birthdays as $birthday):
 				$month = month($birthday['month']);
-				if($use != $birthday['month']):
-					$use = $birthday['month'];
-					$useday = null;
-					echo "<h1> $month </h1>";
-				endif; 
-				
-				if($useday != $birthday['day']):
-					$useday = $birthday['day'];
-					echo "<h2> $birthday[day] </h2>";
-				endif;
+				$use = testmonth($use['0'], $use['1'], $birthday['month'], $birthday['day']);
 		?>
         <p>
             <a href="edit.php?id=<?=$birthday['id']?>">

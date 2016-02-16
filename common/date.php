@@ -1,24 +1,44 @@
 <?php
-function day()
+function day($birthday)
 {
-	for($d = 1; $d <= 31; $d++) 
+	for($d = 1; $d <= 31; $d++)
 	{
+		if($d == $birthday)
+		{
+			echo "<option value=$d selected>$d</option>";
+		}
+		else
+		{
 			echo "<option value=$d>$d</option>";
-	} 
+		}
+	}
 }
-
-function month()
+function month($birthday)
 {
 	for($m = 1; $m <= 12; $m++) 
 	{
-		echo "<option value=$m>$m</option>";
+		if($m == $birthday)
+		{
+			echo "<option value=$m selected>$m</option>";
+		}
+		else
+		{
+			echo "<option value=$m>$m</option>";
+		}
 	} 
 }
 
-function year()
+function year($birthday)
 {
-	for($y = date(Y); $y >= 1900; $y--) 
+	for($y = date(Y); $y >= 1800; $y--) 
 	{
-		echo "<option value=$y>$y</option>";
+		if($y == $birthday)
+		{
+			echo "<option value=$y selected>$y</option>";
+		}
+		else
+		{
+			echo "<option value=$y>$y</option>";
+		}
 	} 
 }
