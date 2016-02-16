@@ -12,14 +12,14 @@ function month()
 {
 	for($m = 1; $m <= 12; $m++) 
 	{
-		$m = monthselect($m);
-		echo "<option value=$m>$m</option>";
+		$mt = monthselect($m);
+		echo "<option value=$m>$mt</option>";
 	} 
 }
 
 function year()
 {
-	for($y = date(Y); $y >= 1900; $y--) 
+	for($y = date(Y); $y >= 1800; $y--) 
 	{
 		echo "<option value=$y>$y</option>";
 	} 
