@@ -1,4 +1,5 @@
 <?php
+require "../common/month.php";
 function day()
 {
 	for($d = 1; $d <= 31; $d++) 
@@ -11,6 +12,7 @@ function month()
 {
 	for($m = 1; $m <= 12; $m++) 
 	{
+		$m = monthselect($m);
 		echo "<option value=$m>$m</option>";
 	} 
 }

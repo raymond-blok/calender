@@ -1,6 +1,7 @@
 <?php
 require "../common/key.php";
 require "../common/date.php";
+
 if(isset($_POST['submit']))
 {
 	$id = $_GET['id'];

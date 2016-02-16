@@ -13,7 +13,7 @@ function testmonth($use, $useday, $month, $day)
 	if($use != $month):
 		$use = $month;
 		$useday = null;
-		$month = month($month);
+		$month = monthselect($month);
 		echo "<h1> $month </h1>";
 	endif; 
 

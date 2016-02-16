@@ -12,7 +12,6 @@
 	<body>
 		<?php
 			foreach($birthdays as $birthday):
-				$month = month($birthday['month']);
 				$use = testmonth($use['0'], $use['1'], $birthday['month'], $birthday['day']);
 		?>
         <p>

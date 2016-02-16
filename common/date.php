@@ -1,4 +1,5 @@
 <?php
+require "../common/month.php";
 function day($birthday)
 {
 	for($d = 1; $d <= 31; $d++)
@@ -17,13 +18,14 @@ function month($birthday)
 {
 	for($m = 1; $m <= 12; $m++) 
 	{
+		$mt = monthselect($m);
 		if($m == $birthday)
 		{
-			echo "<option value=$m selected>$m</option>";
+			echo "<option value=$m selected>$mt</option>";
 		}
 		else
 		{
-			echo "<option value=$m>$m</option>";
+			echo "<option value=$m>$mt</option>";
 		}
 	} 
 }

@@ -1,6 +1,6 @@
 <?php
 
-function month($birthday)
+function monthselect($birthday)
 {
 	switch ($birthday) {
 		case 1:
