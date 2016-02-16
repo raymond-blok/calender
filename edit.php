@@ -10,13 +10,23 @@ require("edit.logic.php");
 </head>
 <body>
 	<h2>wilt u het onderstaande bewerken?</h2>
-	<form action="index.php" method="post">
+	<form action="edit.php?id=<?=$_GET["id"]?>" method="post">
 		naam:
-		<input type="text" value="<?=$birthday["person"]?>" name=""><br>
+		<input type="text" value="<?=$birthday["person"]?>" name="name"><br>
 		datum:
-		<input type="date" value="<?=$birthday["year"]?>-<?=$birthday["month"]?>-<?=$birthday["day"]?>">
+		<select name="day">
+			<?=day();?>
+		</select>
 
-		<button value"edit">bewerk</button>
+		<select name="month">
+			<?=month();?>
+		</select>
+
+		<select name="year">
+			<?=year();?>
+		</select>
+
+		<button value"edit" name="submit">bewerk</button>
 		
 	</form>
 	

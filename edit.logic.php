@@ -1,30 +1,52 @@
 <?php
 require "common/key.php";
-$query =  "SELECT * FROM birthdays WHERE id=$_GET[id]";
-$result = $db -> query($query);
 
-$birthday = $result -> fetch_assoc();
-
-function day()
+if(isset($_POST['submit']))
 {
-	for($d = 1; $d <= 31; $d++) 
-	{
-		echo "<option value=$d>$d</option>";
-	} 
+	require "common/key.php";
+	$id = $_GET['id'];
+	$name = $_POST['name'];
+	$day = $_POST['day'];
+	$month =  $_POST['month'];
+	$year = $_POST['year'];
+
+	$query = "UPDATE birthdays SET person='$name', day= '$day', month= '$month', year= '$year'  WHERE id=$id";
+	$result = $db -> query($query);
+	header('location: index.php');
+
 }
-
-function month()
+elseif(is_numeric($_GET['id']))
 {
-	for($m = 1; $m <= 12; $m++) 
+	$query =  "SELECT * FROM birthdays WHERE id=$_GET[id]";
+	$result = $db -> query($query);
+
+	$birthday = $result -> fetch_assoc();
+
+	function day()
 	{
-		echo "<option value=$m>$m</option>";
-	} 
+		for($d = 1; $d <= 31; $d++) 
+		{
+			echo "<option value=$d>$d</option>";
+		} 
+	}
+
+	function month()
+	{
+		for($m = 1; $m <= 12; $m++) 
+		{
+			echo "<option value=$m>$m</option>";
+		} 
+	}
+
+	function year()
+	{
+		for($y = date(Y); $y >= 1900; $y--) 
+		{
+			echo "<option value=$y>$y</option>";
+		} 
+	}
 }
-
-function year()
+else
 {
-	for($y = date(Y); $y >= 1900; $y--) 
-	{
-		echo "<option value=$y>$y</option>";
-	} 
+	header('location: index.php');
 }
