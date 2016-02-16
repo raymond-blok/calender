@@ -11,7 +11,7 @@ require("delete.logic.php");
 </head>
 <body>
 	<h1>verjaardag verwijderen</h1>
-	<p>weet je zeker dat je de verjaardag van <?=$birthday['person']?> op <?=$birthday['day']?> <?=month($birthday['month']);?> <?=$birthday['year']?> wilt verwijderen</p>
+	<p>weet je zeker dat je de verjaardag van <?=$birthday['person']?> op <?=$birthday['day']?> <?=monthselect($birthday['month']);?> <?=$birthday['year']?> wilt verwijderen</p>
 	<form action="delete.php?id=<?=$_GET['id']?>" method="post">
 		<button name="yes" value="yes">ja</button>
 		<button name="no" value="no">nee</button>

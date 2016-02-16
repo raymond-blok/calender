@@ -9,7 +9,7 @@ require("create.logic.php");
 	<link rel="stylesheet" type="text/css" href="../common/main.css">
 </head>
 <body>
-	<h2>wilt u het onderstaande toevoegen?</h2>
+	<h1>Nieuwe verjaardag</h1>
 	<form action="create.php" method="post">
 		naam:
 		<input type="text" name="name"><br>

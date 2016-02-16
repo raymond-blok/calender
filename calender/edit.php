@@ -9,7 +9,7 @@ require("edit.logic.php");
 	<link rel="stylesheet" type="text/css" href="../common/main.css">
 </head>
 <body>
-	<h2>wilt u het onderstaande bewerken?</h2>
+	<h1><?=$birthday["person"]?></h1>
 	<form action="edit.php?id=<?=$_GET["id"]?>" method="post">
 		naam:
 		<input type="text" value="<?=$birthday["person"]?>" name="name"><br>
